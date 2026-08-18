@@ -3,24 +3,26 @@
 Registro honesto de todo lo que falló durante el proyecto y cómo se resolvió.
 Actualizado a medida que aparecen.
 
-## Descarga de la ISO (Bazzite)
+## Instalación (Fase 2)
 
-| Problema | Causa | Solución |
+| Problema | Síntoma | Solución |
 |---|---|---|
-| `curl: (92) HTTP/2 stream reset by server` a mitad de descarga | Cloudflare corta streams HTTP/2 largos | Reintentar con `--http1.1 -C -` (resume) |
-| `curl: (18) end of response with N bytes missing` | Corte de nuevo en HTTP/1.1 | Cambiar a **aria2c multi-conexión**: `aria2c -c -x 8 -s 8 -k 4M` (8 conexiones + resume + reintentos infinitos). Descarga estable a 23 MB/s |
-| Buscadores web agotados/bloqueados (Brave cuota 2000/mes, Firecrawl key inválida, DDG rate-limit) | Backends de búsqueda configurados mal/agotados | Usar **NotebookLM** (Google) como buscador + RAG: se añaden fuentes por URL o búsqueda, y las consultas devuelven análisis con citas |
+| Descarga de la ISO cortada por Cloudflare | `curl: (92)` HTTP/2 reset / `(18) end of response` | **aria2c -c -x8** (8 conexiones, resume, reintentos) |
+| sshd del instalador de Fedora no arranca | `status=1/FAILURE` al hacer `systemctl start sshd` | `ssh-keygen -A` (faltaban las claves de host) |
+| `usermod -l` no renombra el usuario | *"user is currently used by process 1669"* | `loginctl terminate-user` + job desprendido (el proceso era el `systemd --user` del propio usuario) |
+| SELinux bloquea el servicio arcadenorm | `status=203/EXEC` en systemd | Copiar el binario a `/usr/local/bin` (contexto de sistema) |
+| arcadenorm no se instala en /usr/bin | *"Sistema de ficheros de sólo lectura"* | Fedora Atomic: `PREFIX=$HOME/.local` |
+| fstab roto tras convertir el disco | `mount: wrong fs type` | El script cambió el UUID pero no el tipo (`ntfs3` → `btrfs`) |
+| Flathub de sistema filtrado en Bazzite | *"Nada coincide ... en la rama remota flathub"* | Añadir el remoto Flathub **de usuario** |
+| Heroic no aparece en Flathub | ID con mayúsculas no existe | El ID real es `com.heroicgameslauncher.hgl` |
+| Drop-ins SSH de Red Hat deshabilitados | archivos en `sshd_config.d/disabled/` | Devolver a `sshd_config.d/`; el `40-...` estaba incompleto (faltaba el `Include` de crypto-policies) |
+| sshd_config con `\n` literales | `unsupported option "no\nKbdInteractive..."` | Reescribir con `printf '%s\n'` (escaping remoto) |
+| Calibración arcadenorm en portugués | — | Chuleta traducida (palanca = mantener, AGORA = pulsar) |
+| `--jogadores 2` no sirve para dos placas | Calibra 2 jugadores en una sola placa | Es para encoders duales; dos placas = calibrar una vez por placa |
 
-## Instalación (Bazzite/Anaconda)
+## Descarga de la ISO (Fase 1)
 
-| Problema | Causa | Solución |
+| Problema | Síntoma | Solución |
 |---|---|---|
-| El USB Ventoy "no arranca bien" | USB defectuoso/lento o boot order | Probar con otro disco (NVMe en caja USB con Ventoy) → funciona |
-| `systemctl start sshd` falla en el instalador (exit 1) | El entorno Anaconda no tiene **claves de host SSH** | `ssh-keygen -A` y volver a arrancar `sshd` |
-| `inst.sshd` del arranque no levanta | Parámetro de kernel no aplicado (edición de grub) | Alternativa: terminal del instalador con `Ctrl+Alt+F2` (shell root) |
-| Confusión de discos en el instalador (2× 500 GB) | Discos similares | Identificar por modelo/tamaño en `lsblk -f`; marcar SOLO el de Windows; dejar el NTFS de ROMs sin marcar |
-
-## Pendientes de resolver
-
-- [ ] Regenerar service account de 1Password (403 Service Account Deleted)
-- [ ] Backend web de búsqueda de Hermes (configurar clave válida)
+| Descarga de la ISO cortada por Cloudflare | `curl: (92)` HTTP/2 reset / `(18) end of response` | **aria2c -c -x8** (8 conexiones, resume, reintentos) |
+| USB con Ventoy no arranca | — | Probar otro dispositivo (NVMe en caja USB) |

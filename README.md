@@ -25,10 +25,10 @@ funcionen como mandos de Xbox 360 en cualquier juego.
 ## Fases
 
 - [x] **Fase 1 — La idea y la investigación** (2026-08-17): [El arcade que quería ser consola](_posts/2026-08-17-fase-1-investigacion-y-decisiones.md)
-- [ ] Fase 2 — Instalación de Bazzite (en curso)
-- [ ] Fase 3 — Mandos arcade (arcadenorm)
-- [ ] Fase 4 — Emulación retro (EmuDeck)
-- [ ] Fase 5 — Launchers y juegos modernos
+- [x] **Fase 2 — Instalación y desembarco** (2026-08-18): [La instalación y el desembarco](_posts/2026-08-18-fase-2-instalacion-y-desembarco.md)
+- [ ] Fase 3 — Mandos arcade (arcadenorm) — en curso: J1 calibrado ✅, J2 pendiente
+- [ ] Fase 4 — Emulación retro (ROMs de RetroBat)
+- [ ] Fase 5 — Launchers y juegos modernos (Heroic: DNF Duel, Gigabash, Sifu)
 - [ ] Fase 6 — Unificación y pulido
 
 ## Hardware del proyecto
