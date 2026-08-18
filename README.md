@@ -1,41 +1,40 @@
-# 🕹️ Arcade OS — Build Log
+# 🕹️ El arcade que quería ser consola
 
-Bitácora pública del proyecto para convertir un mini PC **CHUWI UBox** en un
-**arcade híbrido**: juegos retro clásicos + juegos modernos de PC, en una sola
-interfaz tipo consola.
+Tengo un mueble arcade de dos jugadores en casa. Lo monté para tener el sabor de
+los recreativos, y con el tiempo se me ocurrió una idea que parecía sencilla:
+¿y si esa misma máquina pudiera jugar también a los juegos modernos que ya tengo
+en propiedad, en una sola interfaz tipo consola, sin cambiar de equipo y sin
+volverme loco con los mandos?
 
-Este repositorio documenta cada fase: decisiones, pasos exactos, problemas
-reales encontrados y cómo los resolvimos. Escrito por humanos y agentes de IA
-(con un agente haciendo el trabajo pesado y un humano supervisando 😉).
+Este blog es la bitácora real de ese proyecto: un mini PC **CHUWI UBox** (Ryzen
+5 6600H, Radeon 660M, 32 GB) convertido en consola arcade híbrida con
+**Bazzite**. Contado mientras lo hago, con decisiones, problemas reales y
+soluciones.
 
-## Hardware
+- [Sobre este proyecto](about.md)
+- [Incidencias: problemas y soluciones](incidencias.md)
 
-| Componente | Detalle |
-|---|---|
-| Mini PC | CHUWI UBox (CWI604) — Ryzen 5 6600H, Radeon 660M, 32 GB DDR5 dual |
-| Mueble arcade | Kit EG STARTS 2P — 2 encoders USB Zero Delay independientes |
-| Almacenamiento | Disco 1: sistema · Disco 2: ROMs/emulación (NTFS) |
+## El plan en una frase
 
-## Decisiones clave
-
-- **SO**: [Bazzite deck edition](https://bazzite.gg/) (Fedora Atomic) → arranca a Steam Gaming Mode
-- **Mandos**: [arcadenorm](https://github.com/evandeilton/arcadenorm) → encoders Zero Delay como 2 gamepads Xbox 360 virtuales
-- **Retro**: EmuDeck (EmulationStation + RetroArch)
-- **Launchers**: Heroic (Epic/GOG/Amazon) + Lutris (Rockstar/EA/Ubisoft)
-- **Unificación**: Steam ROM Manager → todo en una librería con carátulas
+Retro + juegos modernos, todo en una sola librería navegable con el mando:
+EmuDeck para lo clásico, Heroic y Lutris para Epic/GOG/Rockstar, Proton para los
+juegos de Windows, y **arcadenorm** para que las dos placas del mueble
+funcionen como mandos de Xbox 360 en cualquier juego.
 
 ## Fases
 
-- [x] **Fase 1 — Investigación y decisiones** (2026-08-17): [ver artículo](_posts/2026-08-17-fase-1-investigacion-y-decisiones.md)
-- [ ] Fase 2 — Instalación del sistema (en curso)
+- [x] **Fase 1 — La idea y la investigación** (2026-08-17): [El arcade que quería ser consola](_posts/2026-08-17-fase-1-investigacion-y-decisiones.md)
+- [ ] Fase 2 — Instalación de Bazzite (en curso)
 - [ ] Fase 3 — Mandos arcade (arcadenorm)
 - [ ] Fase 4 — Emulación retro (EmuDeck)
 - [ ] Fase 5 — Launchers y juegos modernos
 - [ ] Fase 6 — Unificación y pulido
 
-## Incidencias
+## Hardware del proyecto
 
-[Registro de problemas y soluciones](incidencias.md) — el apartado más útil de este repo.
+- **Mini PC**: CHUWI UBox (CWI604) — Ryzen 5 6600H, Radeon 660M, 32 GB DDR5 dual
+- **Mueble arcade**: kit 2 jugadores con 2 encoders USB Zero Delay independientes
+- **Almacenamiento**: un disco para el sistema, otro (NTFS) con las ROMs
 
 ---
-*Documentado por [Miquel](https://github.com/MiquelOlavarria) + Bishop (agente Hermes) · [Licencia CC BY-SA 4.0](LICENSE)*
+*Escrito por una persona con ayuda de su agente de IA. Los errores son nuestros; los aciertos, del arcade.*
