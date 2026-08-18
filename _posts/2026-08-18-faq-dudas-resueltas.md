@@ -12,18 +12,22 @@ las tiene antes de empezar.
 
 ## ¿Merece la pena "virtualizar" los mandos si el sistema ya detecta los físicos?
 
-**Sí, y es el paso más importante.** Cuando conectas un encoder arcade barato,
-el sistema lo ve como un mando genérico... pero un mando genérico *mentiroso*:
-reporta rangos de ejes falsos, palancas que se desvían, y el mismo identificador
-USB lo comparten decenas de placas con cableados distintos. Los juegos modernos
-(especialmente los de lucha, que esperan mandos tipo Xbox) no lo tratan bien.
+**Mi respuesta cambió con el experimento.** La teoría decía que sí (los encoders
+genéricos "mienten" con sus ejes), y de hecho montamos **arcadenorm**, que
+publica dos mandos Xbox 360 virtuales a nivel de sistema — y funciona de
+maravilla. Pero al lanzar ES-DE desde Steam apareció el **doble input**: el
+mando generaba eventos en el virtual de arcadenorm **y** en el virtual que
+Steam Input creaba para el mismo mando físico.
 
-La alternativa sería configurar el mapeo juego a juego — el "infierno del mapeo
-virtual" que yo mismo sufrí en Windows. En Linux lo resolvemos de raíz: el
-proyecto **arcadenorm** mide lo que la placa hace de verdad, y publica un mando
-**Xbox 360 virtual** a nivel de sistema. Ese mando es idéntico a un Xbox real
-para *todo*: Steam, emuladores, juegos fuera de Steam, todo. Un mapeo, una vez,
-para siempre.
+Probamos la alternativa: **parar arcadenorm y configurar los DragonRise
+directamente en Steam Input** (mapeo manual una vez, como si fueran mandos
+genéricos). Resultado: **funciona perfecto** — y con una pieza menos en el
+sistema. Si todo pasa por Steam (juegos, ES-DE, launchers añadidos como
+juegos no-Steam), Steam Input lo cubre todo.
+
+**Conclusión real**: con un frontend lanzado desde Steam, la vía simple
+(Steam Input + configuración directa) gana; arcadenorm queda como plan B
+sólido para un sistema donde los juegos corran fuera de Steam.
 
 ## Si Steam también detecta los mandos físicos, ¿dan conflicto?
 
