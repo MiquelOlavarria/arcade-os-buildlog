@@ -26,7 +26,7 @@ funcionen como mandos de Xbox 360 en cualquier juego.
 
 - [x] **Fase 1 — La idea y la investigación** (2026-08-17): [El arcade que quería ser consola](_posts/2026-08-17-fase-1-investigacion-y-decisiones.md)
 - [x] **Fase 2 — Instalación y desembarco** (2026-08-18): [La instalación y el desembarco](_posts/2026-08-18-fase-2-instalacion-y-desembarco.md)
-- [ ] Fase 3 — Mandos arcade (arcadenorm) — en curso: J1 calibrado ✅, J2 pendiente
+- [x] **Fase 3 — Mandos arcade (arcadenorm)** (2026-08-18): 2 placas independientes → 2 configs + 2 servicios → **2 gamepads Xbox 360 virtuales** ✅
 - [ ] Fase 4 — Emulación retro (ROMs de RetroBat)
 - [ ] Fase 5 — Launchers y juegos modernos (Heroic: DNF Duel, Gigabash, Sifu)
 - [ ] Fase 6 — Unificación y pulido
