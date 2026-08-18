@@ -1,10 +1,11 @@
 # 🕹️ El arcade que quería ser consola
 
-Tengo un mueble arcade de dos jugadores en casa. Lo monté para tener el sabor de
-los recreativos, y con el tiempo se me ocurrió una idea que parecía sencilla:
-¿y si esa misma máquina pudiera jugar también a los juegos modernos que ya tengo
-en propiedad, en una sola interfaz tipo consola, sin cambiar de equipo y sin
-volverme loco con los mandos?
+Tengo un mueble arcade de dos jugadores en casa, construido sobre una cómoda
+KULLEN de IKEA. Lo monté para tener el sabor de los recreativos, y con el tiempo
+se me ocurrió una idea que parecía sencilla: ¿y si esa misma máquina pudiera
+jugar también a los juegos modernos que ya tengo en propiedad — los nuevos
+Street Fighter, Killer Instinct, Injustice —, en una sola interfaz tipo consola,
+sin cambiar de equipo y sin volverme loco con los mandos?
 
 Este blog es la bitácora real de ese proyecto: un mini PC **CHUWI UBox** (Ryzen
 5 6600H, Radeon 660M, 32 GB) convertido en consola arcade híbrida con

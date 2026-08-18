@@ -11,8 +11,14 @@ tags: [arcade, bazzite, motivación, proyecto]
 Hace tiempo me monté un mueble arcade. De esos que quedan bien en el salón: dos
 joysticks, botones de colores, luces LED... Lo monté con la idea de tener el
 sabor de los recreativos en casa, de esos que te dejaban sin calderilla los
-domingos por la tarde. Y durante un tiempo fue exactamente eso: una máquina de
-juegos retro donde echar una partida a los clásicos cuando venía alguien a casa.
+domingos por la tarde. El mueble en sí lo construí a partir de una cómoda
+**KULLEN de IKEA** (la de cinco cajones: dos estrechos arriba y tres grandes
+abajo), a la que le monté el panel con los joysticks y los botones. Algún día
+publicaré los planos, las fotos del proceso y cómo quedó — pero ojo, ese no es
+el objeto de este blog. Aquí el protagonista es el *motor*: lo que hace
+funcionar la máquina. El mueble ya está; lo que quiero renovar es lo que hay
+dentro. Y durante un tiempo fue exactamente eso: una máquina de juegos retro
+donde echar una partida a los clásicos cuando venía alguien a casa.
 
 Pero con el tiempo empezó a faltarme algo. El mueble era genial para lo retro,
 pero nada más. Los juegos modernos, los que de verdad jugaba a menudo, se
@@ -23,6 +29,18 @@ o juego "en condiciones"?
 ¿Por qué no las dos cosas? ¿Por qué no tener **una sola caja** que lo hiciera
 todo: el clásico de los ochenta y el juego de PC que compré el año pasado, en la
 misma pantalla, con el mismo mando, sin cambiarme de equipo?
+
+## El feeling arcade
+
+Y aquí va la motivación de fondo, la que de verdad mueve el proyecto. Hay juegos
+actuales que solo existen en las plataformas de hoy: los nuevos *Street
+Fighter*, *Killer Instinct*, *Injustice*, plataformas modernos que no tienen
+versión retro. Esos juegos están pensados para jugarse sentado en un sofá con un
+mando de consola. Pero la experiencia cambia por completo cuando los juegas con
+un joystick y botones, de pie, delante de una pantalla: vuelves a estar en el
+salón recreativo, con los dedos sudando y la semanada en el bolsillo. Eso es lo
+que quiero recuperar con los juegos de hoy. No se trata solo de conservar el
+pasado, sino de traer el espíritu del recreativo al presente.
 
 Esa era la idea. Y como todas las ideas que parecen sencillas, tenía su miga.
 
