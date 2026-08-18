@@ -43,16 +43,16 @@ consola).
 ## El desembarco: SSH, usuario y el proceso fantasma
 
 Una vez instalado, el plan era dar acceso remoto a Bishop con su clave pública.
-La odisea del usuario: el instalador crea `bazzite/bazzite` (el default) y
-queríamos **`miquel` con contraseña propia**. Renombrar el usuario parecía
+La odisea del usuario: el instalador deja un usuario por defecto y
+queríamos **un usuario propio con contraseña personal**. Renombrar el usuario parecía
 simple... hasta que `usermod` se negaba: *"user bazzite is currently used by
 process 1669"*. El culpable era el `systemd --user` del propio usuario (un
 proceso que vive mientras haya sesión). La solución limpia: `loginctl
 terminate-user` (cierra las sesiones del usuario ordenadamente) lanzado en un
 job desprendido, porque... sí, mataba mi propia conexión SSH al ejecutarse 😄
 
-De paso descubrí que había dejado abierto el acceso **root por contraseña** como
-puerta de emergencia; una vez recuperado el control, lo cerramos (solo clave
+De paso descubrí que había dejado abierta una **puerta de acceso de
+emergencia**; una vez recuperado el control, la cerramos (solo clave
 pública, sin root). Y al revisar la configuración de SSH me encontré con que los
 drop-ins de Red Hat habían acabado en una carpeta `disabled/`: los devolvimos a
 su sitio, uno de ellos estaba incompleto (le faltaba el `Include` de la política
@@ -100,7 +100,7 @@ Instalarlo en Bazzite (imagen inmutable) fue un curso acelerado:
 
 ## Dónde estamos
 
-- ✅ Sistema Bazzite instalado, usuario `miquel`, SSH seguro por clave
+- ✅ Sistema Bazzite instalado, usuario propio, SSH seguro por clave
 - ✅ Disco de datos en btrfs, montado automáticamente
 - ✅ Heroic, RetroArch, Lutris y arcadenorm instalados
 - ✅ Jugador 1 calibrado como **Microsoft X-Box 360 pad** (¡el mueble ya es un
